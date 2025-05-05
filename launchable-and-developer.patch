@@ -1,0 +1,30 @@
+commit 99edd4e8f3c84187c498bad0698f9300227aa9fe
+Author: Friedrich W. H. Kossebau <kossebau@kde.org>
+Date:   Tue Mar 19 16:37:25 2024 +0100
+
+    appdata: use desktop-application type, add developer & launchable tags
+
+diff --git a/org.kde.SymbolEditor.appdata.xml b/org.kde.SymbolEditor.appdata.xml
+index 4666501..f84dd9c 100644
+--- a/org.kde.SymbolEditor.appdata.xml
++++ b/org.kde.SymbolEditor.appdata.xml
+@@ -1,7 +1,10 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<component type="desktop">
++<component type="desktop-application">
+   <id>org.kde.SymbolEditor.desktop</id>
+   <metadata_license>GFDL-1.2-only</metadata_license>
++  <developer id="org.kde">
++    <name translate="no">KDE</name>
++  </developer>
+   <name>SymbolEditor</name>
+   <name xml:lang="ca">SymbolEditor</name>
+   <name xml:lang="ca-valencia">SymbolEditor</name>
+@@ -290,6 +293,7 @@
+   <provides>
+     <binary>SymbolEditor</binary>
+   </provides>
++  <launchable type="desktop-id">org.kde.SymbolEditor.desktop</launchable>
+   <releases>
+     <release version="2.1.0" date="2019-06-30"/>
+     <release version="2.0.0" date="2015-11-16"/>

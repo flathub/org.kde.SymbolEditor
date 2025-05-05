@@ -1,0 +1,20 @@
+commit 511c3d76a1b4c8413ffed27a66e73c6610e39b8d
+Author: Boudhayan Bhattacharya <bbhtt.zn0i8@slmail.me>
+Date:   Tue Jun 18 11:11:12 2024 +0530
+
+    Add project_license to appdata
+    
+    See https://invent.kde.org/teams/flathub/issues/-/issues/28#error-missing-project-license
+
+diff --git a/org.kde.SymbolEditor.appdata.xml b/org.kde.SymbolEditor.appdata.xml
+index f84dd9c..04005a6 100644
+--- a/org.kde.SymbolEditor.appdata.xml
++++ b/org.kde.SymbolEditor.appdata.xml
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <component type="desktop-application">
+   <id>org.kde.SymbolEditor.desktop</id>
++  <project_license> GPL-2.0-or-later</project_license>
+   <metadata_license>GFDL-1.2-only</metadata_license>
+   <developer id="org.kde">
+     <name translate="no">KDE</name>
