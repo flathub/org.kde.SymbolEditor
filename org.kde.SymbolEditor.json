@@ -1,7 +1,7 @@
 {
     "id": "org.kde.SymbolEditor",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "5.15-24.08",
     "sdk": "org.kde.Sdk",
     "command": "SymbolEditor",
     "rename-icon": "symboleditor",
@@ -38,6 +38,14 @@
                 {
                     "type": "patch",
                     "path": "appstream-license.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "launchable-and-developer.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "license.patch"
                 }
             ]
         }
