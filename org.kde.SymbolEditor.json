@@ -33,19 +33,12 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appstream-oars-releases.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "appstream-license.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "launchable-and-developer.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "license.patch"
+                    "paths": [
+                        "patches/appstream-oars-releases.patch",
+                        "patches/appstream-license.patch",
+                        "patches/launchable-and-developer.patch",
+                        "patches/license.patch"
+                    ]
                 }
             ]
         }
