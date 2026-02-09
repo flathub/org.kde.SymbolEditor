@@ -13,6 +13,9 @@
         "--socket=fallback-x11",
         "--system-talk-name=org.freedesktop.UDisks2"
     ],
+    "cleanup": [
+        "/share/doc"
+    ],
     "modules": [
         {
             "name": "symboleditor",
