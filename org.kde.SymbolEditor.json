@@ -21,7 +21,8 @@
             "name": "symboleditor",
             "buildsystem": "cmake-ninja",
             "post-install": [
-                "install -Dm0644 logo.png /app/share/icons/hicolor/128x128/apps/org.kde.SymbolEditor.png"
+                "install -Dm0644 logo.png /app/share/icons/hicolor/128x128/apps/org.kde.SymbolEditor.png",
+                "gunzip -S z /app/share/icons/hicolor/scalable/apps/symboleditor.svgz"
             ],
             "sources": [
                 {
