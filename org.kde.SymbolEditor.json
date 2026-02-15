@@ -1,7 +1,7 @@
 {
     "id": "org.kde.SymbolEditor",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-24.08",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "command": "SymbolEditor",
     "rename-icon": "symboleditor",
@@ -13,12 +13,19 @@
         "--socket=fallback-x11",
         "--system-talk-name=org.freedesktop.UDisks2"
     ],
+    "cleanup": [
+        "/share/doc"
+    ],
     "modules": [
         {
             "name": "symboleditor",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
             "post-install": [
-                "install -Dm0644 logo.png /app/share/icons/hicolor/128x128/apps/org.kde.SymbolEditor.png"
+                "install -Dm0644 logo.png /app/share/icons/hicolor/128x128/apps/org.kde.SymbolEditor.png",
+                "gunzip -S z /app/share/icons/hicolor/scalable/apps/symboleditor.svgz"
             ],
             "sources": [
                 {
@@ -33,19 +40,12 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appstream-oars-releases.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "appstream-license.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "launchable-and-developer.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "license.patch"
+                    "paths": [
+                        "patches/appstream-oars-releases.patch",
+                        "patches/appstream-license.patch",
+                        "patches/launchable-and-developer.patch",
+                        "patches/license.patch"
+                    ]
                 }
             ]
         }
